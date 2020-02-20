@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Learn Testing</title>
+  </head>
+  <body>
+    <h1>Open the console</h1>
+
+    <!-- include our testing helpers -->
+    <script src="solution.js"></script>
+    <script>
+      // the function we're testing
+      function square(x) {
+        return x * x;
+      }
+
+      // our tests
+      test("Correctly squares integers", t => {
+        const result = square(2);
+        const expected = 4;
+        t.equal(result, expected);
+        t.equal(result, 2); // this one will fail
+        t.notEqual(result, 5);
+      });
+
+      test("Correctly squares decimals", t => {
+        const result = square(2.23);
+        const expected = 4.9729;
+        t.equal(result, expected);
+      });
+    </script>
+  </body>
+</html>
