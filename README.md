@@ -16,7 +16,7 @@ console.log(result); // 4
 
 Right now the only way to check that it works is to manually call the function, then check that the output is what you expect (maybe using a calculator). If you want to check lots of different inputs this becomes a lot of manual work that you have to do every time you want to change the code. It would be nice if you could automate this testing.
 
-## Part one: begin to automate
+## Begin to automate
 
 Since you know how to code you can begin to automate this! Write some JavaScript that calls the `square` function (like above), then checks that the result is what you expect. It should log a useful message to the console using `console.error("my message")` if the result is wrong.
 
@@ -35,7 +35,7 @@ If your test passes change your expected value so that it's definitely wrong. Ca
 
 </details>
 
-## Part two: make it reusable
+## Make it reusable
 
 This is better than manually checking, but not much. We have to write all the same logic for checking whether the values are the same and logging every time.
 
@@ -69,7 +69,7 @@ equal(result2, expected2);
 
 If your test is passing change your expected value so that it's definitely wrong. Can you see the error in your browser console?
 
-## Part three: separating tests
+## Separating tests
 
 Right now our tests are all jumbled together. This means they share the same scope, so we can't reuse variable names. It's also hard to distinguish them in the console. It would be good to have something that looked like this:
 
