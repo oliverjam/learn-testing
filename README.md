@@ -1,6 +1,6 @@
 # Learn testing in JavaScript
 
-Let's learn about testing by building our own testing library.
+Let's learn about testing by building our own tiny testing library.
 
 ## Setup
 

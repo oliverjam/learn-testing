@@ -9,12 +9,37 @@
   <body>
     <h1>Open the console</h1>
 
-    <!-- include our testing helpers -->
-    <script src="solution.js"></script>
     <script>
       // the function we're testing
       function square(x) {
         return x * x;
+      }
+
+      function test(name, testFunction) {
+        function equal(x, y, message = `Expected ${x} to equal ${y}`) {
+          if (x === y) {
+            console.info("Pass: " + message);
+          } else {
+            console.error("Fail: " + message);
+          }
+        }
+
+        function notEqual(x, y, message = `Expected ${x} not to equal ${y}`) {
+          if (x !== y) {
+            console.info("Pass: " + message);
+          } else {
+            console.error("Fail: " + message);
+          }
+        }
+
+        const assertions = {
+          equal,
+          notEqual,
+        };
+
+        console.group(name);
+        testFunction(assertions);
+        console.groupEnd(name);
       }
 
       // our tests
