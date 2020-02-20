@@ -1,5 +1,7 @@
 # Learn testing in JavaScript
 
+Let's learn about testing by building our own testing library.
+
 ## Setup
 
 1. Clone this repo
