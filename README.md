@@ -81,6 +81,12 @@ test("Correctly squares integers", () => {
   const expected = 4;
   equal(result, expected);
 });
+
+test("Correctly squares integers", () => {
+  const result = square(3.5);
+  const expected = 12.25;
+  equal(result, expected);
+});
 ```
 
 We call a `test` function with a descriptive name for this specific test, and pass a callback with our actual test code.
