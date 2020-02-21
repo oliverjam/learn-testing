@@ -143,7 +143,7 @@ function equal(x, y, message = `Expected ${x} to equal ${y}`) {
 test("Correctly squares integers", () => {
   const result = square(2);
   const expected = 4;
-  equal(result, expected, "square(2) should be 4);
+  equal(result, expected, "square(2) should be 4");
 });
 ```
 
