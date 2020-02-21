@@ -71,9 +71,9 @@ If your test is passing change your expected value so that it's definitely wrong
 
 ## Separating tests
 
-Right now our tests are all jumbled together. This means they share the same scope, so we can't reuse variable names. It's also hard to distinguish them in the console. It would be good to have something that looked like this:
+Right now our tests are all jumbled together. This means they share the same scope, so we can't reuse variable names. It's also hard to distinguish them in the console.
 
-A nice way to split up our tests would be with a function, like this:
+We could divide our tests up using functions, like this:
 
 ```js
 test("Correctly squares integers", () => {
