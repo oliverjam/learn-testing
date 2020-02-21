@@ -194,10 +194,10 @@ function test(name, testFunction) {
   console.groupEnd(name);
 }
 
-test("Correctly squares integers", () => {
+test("Correctly squares integers", t => {
   const result = square(2);
   const expected = 4;
-  equal(result, expected, "square(2) should be 4);
+  t.equal(result, expected);
 });
 ```
 
