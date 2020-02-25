@@ -39,6 +39,8 @@ If your test passes change your expected value so that it's definitely wrong. Ca
 
 This is better than manually checking, but not much. We have to write all the same logic for checking whether the values are the same and logging every time.
 
+### `equal`
+
 Write a function called `equal` that takes two arguments and checks if they're equal. If they are it should log the success with `console.info`. If they aren't it should log the failure with `console.error`.
 
 Use this `equal` function to refactor your test above, then write another one to check that `square(3.5)` is correct.
@@ -68,6 +70,30 @@ equal(result2, expected2);
 </details>
 
 If your test is passing change your expected value so that it's definitely wrong. Can you see the error in your browser console?
+
+### `notequal`
+
+Now write a `notEqual` function. It should be similar to `equal`, but log failure when its two arguments _are_ the same.
+
+Write a test that checks `square(3)` does not return 10.
+
+<details>
+<summary>Answer</summary>
+
+```js
+function notEqual(x, y) {
+  const message = `Expected ${x} not to equal ${y}`;
+  if (x !== y) {
+    console.info("Pass: " + message);
+  } else {
+    console.error("Fail: " + message);
+  }
+}
+
+const result = square(3);
+const expected = 10;
+notEqual(result, expected);
+```
 
 ## Separating tests
 
