@@ -161,6 +161,8 @@ test("Correctly squares integers", t => {
 });
 ```
 
+This is useful as it allows each assertion to know the name of the test it was called inside. We won't be using this but "real" testing libraries do in order to keep track of exactly which tests passed and failed. It's good to practice with a realistic API so you're familiar with it when you use a real library.
+
 Move `equal` and `notEqual` inside your `test` function. Then pass an object containing both to the `testFunction` callback. Change your tests to use this object.
 
 <details>
