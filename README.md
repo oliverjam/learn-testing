@@ -95,6 +95,8 @@ const expected = 10;
 notEqual(result, expected);
 ```
 
+</details>
+
 ## Separating tests
 
 Right now our tests are all jumbled together. This means they share the same scope, so we can't reuse variable names. It's also hard to distinguish them in the console.
