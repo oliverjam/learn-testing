@@ -16,7 +16,7 @@ console.log(result); // 4
 
 Right now the only way to check that it works is to manually call the function, then check that the output is what you expect (maybe using a calculator). If you want to check lots of different inputs this becomes a lot of manual work that you have to do every time you want to change the code. It would be nice if you could automate this testing.
 
-## Begin to automate
+## 1 Begin to automate
 
 Since you know how to code you can begin to automate this! Write some JavaScript that calls the `square` function (like above), then checks that the result is what you expect. It should log a useful message to the console using `console.error("my message")` if the result is wrong.
 
@@ -35,11 +35,11 @@ If your test passes change your expected value so that it's definitely wrong. Ca
 
 </details>
 
-## Make it reusable
+## 2 Make it reusable
 
 This is better than manually checking, but not much. We have to write all the same logic for checking whether the values are the same and logging every time.
 
-### `equal`
+### 2.1 `equal`
 
 Write a function called `equal` that takes two arguments and checks if they're equal. If they are it should log the success with `console.info`. If they aren't it should log the failure with `console.error`.
 
@@ -71,7 +71,7 @@ equal(result2, expected2);
 
 If your test is passing change your expected value so that it's definitely wrong. Can you see the error in your browser console?
 
-### `notequal`
+### 2.2 `notequal`
 
 Now write a `notEqual` function. It should be similar to `equal`, but log failure when its two arguments _are_ the same.
 
@@ -97,7 +97,7 @@ notEqual(result, expected);
 
 </details>
 
-## Separating tests
+## 3 Separating tests
 
 Right now our tests are all jumbled together. This means they share the same scope, so we can't reuse variable names. It's also hard to distinguish them in the console.
 
@@ -150,7 +150,7 @@ test("Correctly squares decimals", () => {
 
 ![](https://user-images.githubusercontent.com/9408641/74967349-b587b080-5410-11ea-8295-a2f81a8d0f78.png)
 
-## Custom messages
+## 4 Custom messages
 
 For more complex assertions it's nice to be able to write a custom message so that when the test fails you can see more detail.
 
@@ -177,7 +177,7 @@ test("Correctly squares integers", () => {
 
 </details>
 
-## Scoped assertions
+## 5 Scoped assertions
 
 Currently our `equal` and `notEqual` assertion functions are global. It would be convenient to pass an object of all assertions in to our callback, so we can access them like this:
 
